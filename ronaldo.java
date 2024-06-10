@@ -17,7 +17,10 @@ public class ronaldo {
         boolean continuar = true;
 
         while (continuar) {
-            System.out.println("¡BIENVENIDO A LA TIENDA DE INKAFARMA!");
+            System.out.println("╔══════ •\uD83E\uDD8B.•\uD83D\uDC9C•.¸\uD83C\uDF3A¸.•\uD83D\uDC99•.\uD83C\uDF1F•.•\uD83D\uDC99•.¸\uD83C\uDF3A¸.•\uD83D\uDC9C•.\uD83E\uDD8B•══════╗\n" +
+                    ":·.·:¨\uD83C\uDF38¡BIENVENIDO A LA TIENDA DE INKAFARMA! \uD83C\uDF38¨:·.·:\n" +
+                    "╚══════ •\uD83E\uDD8B.•\uD83D\uDC9C•.¸\uD83C\uDF3A¸.•\uD83D\uDC99•.\uD83C\uDF1F•.•\uD83D\uDC99•.¸\uD83C\uDF3A¸.•\uD83D\uDC9C•.\uD83E\uDD8B•══════╝" );
+
             System.out.println("Presione 1 para iniciar sesión:");
             System.out.println("Presione 2 para crear una cuenta:");
             System.out.println("Presione 0 para salir:");
@@ -26,7 +29,9 @@ public class ronaldo {
 
             switch (opcion) {
                 case 1:
-                    iniciarSesion(scanner);
+                    if (iniciarSesion(scanner)) {
+                        continuar = false;
+                    }
                     break;
                 case 2:
                     crearCuenta(scanner);
@@ -42,16 +47,22 @@ public class ronaldo {
         }
     }
 
-    private void iniciarSesion(Scanner scanner) {
+    private boolean iniciarSesion(Scanner scanner) {
         System.out.println("Ingrese su nombre de usuario:");
         String usuario = scanner.nextLine();
         System.out.println("Ingrese su contraseña:");
         String contraseña = scanner.nextLine();
 
         if (verificarCredenciales(usuario, contraseña)) {
-            System.out.println("Inicio de sesión exitoso. ¡Bienvenido AH INKAFARMA!");
+            System.out.println(" ╔══════.¸¸.\uD83E\uDDE1.¸¸.\uD83C\uDF1C¸.\uD83E\uDD16.¸¸.❄\uFE0F.¸¸.\uD83E\uDDE1.¸══════╗\n" +
+                    " ╞══\uD83C\uDF3A══\uD83C\uDF1F\uD83C\uDF1F˖°°¡Bienvenido AH INKAFARMA!°°°˖\uD83C\uDF1F\uD83C\uDF1F══\uD83C\uDF3A══╡\n " +
+                    "╚══════.¸¸.\uD83D\uDC07.¸¸.\uD83E\uDD40¸.\uD83D\uDC9B.¸¸.\uD83E\uDD40.¸¸.\uD83D\uDC24.¸══════╝");
+            return true;
         } else {
-            System.out.println("Nombre de usuario o contraseña incorrectos. Por favor, inténtelo de nuevo.");
+            System.out.println("╔══════⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F══════╗\n" +
+                    "Nombre de usuario o contraseña incorrectos. Por favor, inténtelo de nuevo \n" +
+                    "╚══════⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F⚠\uFE0F══════╝ ");
+            return false;
         }
     }
 
@@ -72,7 +83,10 @@ public class ronaldo {
 
     private void iniciarSesionAutomatica(String usuario, String contraseña) {
         if (verificarCredenciales(usuario, contraseña)) {
-            System.out.println("Inicio de sesión automático exitoso. ¡Bienvenido AH INKAFARMA!");
+
+            System.out.println(" ╔══════.¸¸.\uD83E\uDDE1.¸¸.\uD83C\uDF1C¸.\uD83E\uDD16.¸¸.❄\uFE0F.¸¸.\uD83E\uDDE1.¸══════╗\n" +
+                    " ╞══\uD83C\uDF3A══\uD83C\uDF1F\uD83C\uDF1F˖°°¡Bienvenido AH INKAFARMA!°°°˖\uD83C\uDF1F\uD83C\uDF1F══\uD83C\uDF3A══╡\n " +
+                    "╚══════.¸¸.\uD83D\uDC07.¸¸.\uD83E\uDD40¸.\uD83D\uDC9B.¸¸.\uD83E\uDD40.¸¸.\uD83D\uDC24.¸══════╝");
         } else {
             System.out.println("Error al iniciar sesión automáticamente. Por favor, inicie sesión manualmente.");
         }
