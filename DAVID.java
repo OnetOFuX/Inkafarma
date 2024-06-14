@@ -78,6 +78,8 @@ List<Producto> listaProducto = new ArrayList<Producto>();
         System.out.println("|10.- Agora Club|");
         System.out.println("|11.- Aliviamed|");
         System.out.println("|12.- Catálogo|");
+        System.out.println();
+        System.out.println("13.- chat bot");
 
     }
 
@@ -381,7 +383,11 @@ List<Producto> listaProducto = new ArrayList<Producto>();
                 System.out.println("N  NN A   A D   D A   A ");
                 System.out.println("N   N A   A DDDD  A   A ");
                 break;
-
+            case 13:
+                chabots huevos1 = new chabots();
+                huevos1.adrian();
+                
+                break;
             default:
                 System.out.println("Opcion no valida");
                 break;
