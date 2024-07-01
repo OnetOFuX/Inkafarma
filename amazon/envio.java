@@ -52,10 +52,10 @@ public class envio {
         SimpleDateFormat formatoedhroa = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String hora = formatoedhroa.format(horadetucasa);
 
-        System.out.println("¿Desea imprimir su orden? (sí/no)");
+        System.out.println("¿Desea imprimir su orden? (si/no)");
         String respuesta = gato.nextLine().trim().toLowerCase();
 
-        if (respuesta.equals("sí")) {
+        if (respuesta.equals("si")) {
             try (FileWriter orde = new FileWriter("orden.txt", true)) {
                 orde.write("Orden creada con éxito\n");
                 orde.write("Fecha y Hora de la creación de la orden: " + hora + "\n");
